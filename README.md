@@ -1,9 +1,10 @@
 <div align="center">
 
-# hex2ansi - [hextoansi.xyz](https://hextoansi.xyz)
+# [hextoansi](https://hextoansi.xyz)
 
-## A hexadeciaml to ANSI escape code converter
+A hexadeciaml to ANSI escape code converter
+
+Convert any hexadecimal number to it's closest corresponding ANSI escape code
 
 </div>
 
-Convert any hexadecimal number to it's closest corresponding ANSI escape code
