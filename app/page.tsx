@@ -7,7 +7,7 @@ function hexToAnsi(hex: string): string {
     hex = hex.replace('#', '');
 
     if (!/^[0-9A-Fa-f]{6}$/.test(hex)) {
-        return ""
+        return "ANSI here.."
     }
 
     // Convert hex to RGB
@@ -58,12 +58,17 @@ function hexToAnsi(hex: string): string {
 }
 
 const ColoredText: React.FC<{ text: string; hexColor: string }> = ({ text, hexColor }) => {
-    return <span>{`${hexColor}${text}`}</span>;
+    return(
+        <span className="font-mono text-base break-all">
+        {`${hexColor}${text}`}
+        </span>
+    );
 };
 
 export default function Page() {
     const [inputValue, setInputValue] = useState('');
-    const [res, setRes] = useState('');
+    const [res, setRes] = useState('ANSI here..');
+
 
     const handleChange = (event) => {
         setInputValue(event.target.value);
@@ -78,10 +83,13 @@ export default function Page() {
         value={inputValue}
         onChange={handleChange}
         placeholder="put hex in here.."
+        className="w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition duration-200 placeholder-gray-400 shadow-sm"
         />
         <p className="mb-2">
         </p>
-        <ColoredText text={res} hexColor="" />
+        <div className="p-4 rounded-lg border border-gray-100 shadow-sm">
+            <ColoredText text={res} hexColor="" />
+        </div>
         </section>
     )
 }
