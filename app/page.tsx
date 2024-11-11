@@ -1,5 +1,4 @@
 "use client"
-import { BlogPosts } from 'app/components/posts'
 import React, { useState } from 'react';
 
 function hexToAnsi(hex: string): string {
