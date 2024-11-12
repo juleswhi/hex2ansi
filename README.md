@@ -2,7 +2,7 @@
 
 # [hextoansi](https://hextoansi.xyz)
 
-A hexadeciaml to ANSI escape code converter
+A hexadecimal to ANSI escape code converter
 
 Convert any hexadecimal number to it's closest corresponding ANSI escape code
 
